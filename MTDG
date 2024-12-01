@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar sesión</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #00bfa5;
+      color: white;
+    }
+
+    .container {
+      text-align: center;
+      background: white;
+      color: black;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      width: 90%;
+      max-width: 400px;
+    }
+
+    .logo {
+      width: 100px;
+      margin-bottom: 20px;
+    }
+
+    input {
+      width: 80%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+    }
+
+    button {
+      width: 80%;
+      padding: 10px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #continue {
+      background-color: #00796b;
+      color: white;
+    }
+
+    .google-btn {
+      background-color: #4285F4;
+      color: white;
+    }
+
+    .google-btn:hover {
+      background-color: #3367D6;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="tu-logo.png" alt="Logo" class="logo">
+    <h1>Iniciar sesión a Mediatecmed</h1>
+    <p>Por favor, ingresa tu correo electrónico.</p>
+    <input type="email" placeholder="Introduce tu dirección de correo" id="email">
+    <button id="continue">Continuar</button>
+    <button id="google-login" class="google-btn">Continuar con Google</button>
+  </div>
+
+  <script>
+    // Manejar el botón de continuar con Google
+    document.getElementById('google-login').addEventListener('click', () => {
+      alert('Integrar aquí Google OAuth.');
+    });
+
+    // Opcional: manejar el envío de correo
+    document.getElementById('continue').addEventListener('click', () => {
+      const email = document.getElementById('email').value;
+      if (email) {
+        alert(Correo ingresado: ${email});
+      } else {
+        alert('Por favor, introduce un correo válido.');
+      }
+    });
+  </script>
+</body>
+</html>
